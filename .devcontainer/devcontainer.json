@@ -1,0 +1,15 @@
+{
+  "name": "chatdev2",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.10" },
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "forwardPorts": [6333],
+  "portsAttributes": {
+    "6333": { "label": "Qdrant", "onAutoForward": "notify" }
+  },
+  "dockerComposeFile": "docker-compose.yml",
+  "remoteUser": "vscode"
+}
