@@ -1,0 +1,6 @@
+autogen-agentchat
+langgraph
+qdrant-client
+crewai
+langsmith
+pytest
